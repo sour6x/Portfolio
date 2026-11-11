@@ -33,7 +33,12 @@ Commit the updated `docs/` directory. GitHub Pages serves `main` → `/docs` at 
 - `src/style.css`: base layout and responsive styling.
 - `src/circuit.css`: scroll trace and project section animations.
 - `src/hero.css`: headline and chip animations.
+- `src/readability.css`: text contrast, readable sizing, responsive controls, and focus states.
 - `public/`: resume, favicon, and project images.
+
+## Official frontend skills
+
+Project-local skills from [Anthropic](https://github.com/anthropics/skills/tree/main/skills/frontend-design) and [OpenAI](https://github.com/openai/plugins/tree/main/plugins/build-web-apps/skills/frontend-app-builder) are installed under `.agents/skills/`. They are available for future project work. Read `AGENTS.md` and `DESIGN.md` for the established PCB visual system and readability requirements.
 
 Animations respect the visitor's reduced-motion preference. Project images and descriptions come from the owner's project repositories; this portfolio does not certify prototype performance.
 
