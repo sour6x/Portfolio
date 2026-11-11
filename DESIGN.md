@@ -71,3 +71,5 @@ The side rail is replaced by a connected root network in native page coordinates
 Browser verification confirmed growth changes when scrolling down and back up, multiple simultaneously active routes, 57 routes at the inspected laptop width and 85 at 390px, and no mobile horizontal overflow. Reduced-motion mode retains direct line-fill feedback while removing traveling sparks and glow. Existing chip and project animations remain unchanged.
 
 The footer is reduced to a single centered, copper-bordered Back to top control with an upward SVG arrow. Name, copyright and tagline are removed; the contact section remains intact.
+
+Certifications and training use a dedicated heading and six individual list entries with copper connector details and subtle dividers. The list has two columns on wider screens and one below 600px, with 16px titles. Browser checks confirmed all six entries, a single mobile column, and no overflow. The projects heading is exactly “My projects”. Contact supporting copy is “For opportunities, collaborations, or a conversation about electronics, get in touch.”
