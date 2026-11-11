@@ -2,6 +2,8 @@
 
 A React portfolio with an animated PCB aesthetic, copper traces, scroll-driven current, and selected electronics and embedded systems projects.
 
+**[View the live portfolio](https://sour-portfolio.vercel.app/)** · **[Download resume](https://sour-portfolio.vercel.app/V-Raj-Narayanan-Resume.pdf)**
+
 ## Run locally
 
 Requires Node.js and pnpm 11.25.0.
@@ -19,13 +21,19 @@ Open the localhost address printed by Vite.
 pnpm build
 ```
 
-## GitHub Pages
+## Deploy to Vercel
+
+The primary portfolio URL is **https://sour-portfolio.vercel.app/**.
+
+The repository includes `vercel.json` with the Vite framework, `pnpm build` as the build command, and `dist` as the output directory. Deploy the repository root so assets are served from `/`. The resume is served at `/V-Raj-Narayanan-Resume.pdf`.
+
+## Optional GitHub Pages export
 
 ```sh
 pnpm build:pages
 ```
 
-Commit the updated `docs/` directory. GitHub Pages serves `main` → `/docs` at `https://sour6x.github.io/Portfolio/` when publishing is enabled. This build sets the `/Portfolio/` asset base; localhost development continues to use `/`.
+This optional export writes the static site to `docs/` with the `/Portfolio/` asset base for the existing GitHub Pages configuration. Commit the updated `docs/` directory to update that export. Vercel uses the normal `pnpm build` output in `dist`, with root-relative assets, rather than this Pages export.
 
 ## Edit content
 
@@ -43,4 +51,5 @@ Commit the updated `docs/` directory. GitHub Pages serves `main` → `/docs` at 
 Project-local skills from [Anthropic](https://github.com/anthropics/skills/tree/main/skills/frontend-design) and [OpenAI](https://github.com/openai/plugins/tree/main/plugins/build-web-apps/skills/frontend-app-builder) are installed under `.agents/skills/`. They are available for future project work. Read `AGENTS.md` and `DESIGN.md` for the established PCB visual system and readability requirements.
 
 Animations respect the visitor's reduced-motion preference. Project images and descriptions come from the owner's project repositories; this portfolio does not certify prototype performance.
+
 
