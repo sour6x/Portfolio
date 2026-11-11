@@ -73,3 +73,5 @@ Browser verification confirmed growth changes when scrolling down and back up, m
 The footer is reduced to a single centered, copper-bordered Back to top control with an upward SVG arrow. Name, copyright and tagline are removed; the contact section remains intact.
 
 Certifications and training use a dedicated heading and six individual list entries with copper connector details and subtle dividers. The list has two columns on wider screens and one below 600px, with 16px titles. Browser checks confirmed all six entries, a single mobile column, and no overflow. The projects heading is exactly “My projects”. Contact supporting copy is “For opportunities, collaborations, or a conversation about electronics, get in touch.”
+
+Smart Railway Safety System is the fifth project, after the pitch-shift pedal. Its model-vehicle photograph is contained to show the full prototype. Copy follows the repository's Arduino Uno / HC-SR04 model-scale scope. Project counters derive their total from the project array. Browser checks confirmed five projects, the correct repository link, a loaded photo, and a single-column mobile layout without overflow.
