@@ -34,6 +34,7 @@ Commit the updated `docs/` directory. GitHub Pages serves `main` → `/docs` at 
 - `src/circuit.css`: scroll trace and project section animations.
 - `src/hero.css`: headline and chip animations.
 - `src/readability.css`: text contrast, readable sizing, responsive controls, and focus states.
+- `src/ScrollCircuit.jsx` and `src/roots.css`: connected copper roots spanning the page, with scroll-driven growth and protected reading areas.
 - `public/`: resume, favicon, and project images.
 
 ## Official frontend skills

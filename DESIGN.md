@@ -63,3 +63,11 @@ The existing user-approved PCB layout was the reference. This was an existing-sy
 | Scope and copy | Preserve the engineering story | Name, intro, education, project descriptions/order and links preserved; section headings simplified |
 
 Intentional deviations from the old screenshot: brighter and larger text, sentence-case labels, clearer headings, removal of decorative section numbers, one fewer font family, stronger focus styling, and an SVG arrow. User-requested circuit motion and the text-free chip remain. Existing reduced-motion rules remain in the source. Contrast figures apply to the specified text/surface pairs; they are not a claim of a complete accessibility certification.
+
+## Branching scroll circuit
+
+The side rail is replaced by a connected root network in native page coordinates. A central trunk seeds left/right forks, which seed smaller twigs. Scroll position controls the illuminated length of every branch; scrolling upward retracts it. SVG masks protect text, controls, and project images. Passive scroll listeners and requestAnimationFrame batch updates; geometry is recalculated after responsive layout or font changes.
+
+Browser verification confirmed growth changes when scrolling down and back up, multiple simultaneously active routes, 57 routes at the inspected laptop width and 85 at 390px, and no mobile horizontal overflow. Reduced-motion mode retains direct line-fill feedback while removing traveling sparks and glow. Existing chip and project animations remain unchanged.
+
+The footer is reduced to a single centered, copper-bordered Back to top control with an upward SVG arrow. Name, copyright and tagline are removed; the contact section remains intact.
