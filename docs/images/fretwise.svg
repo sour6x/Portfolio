@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+ <title id="title">Fretwise — Guitar practice studio</title><desc id="desc">Project illustration featuring a guitar fretboard and audio waveform in Fretwise's black and walnut palette. This is an illustration, not a screenshot.</desc>
+ <defs><linearGradient id="wood" x2="0" y2="1"><stop stop-color="#402b1e"/><stop offset=".5" stop-color="#2b1e17"/><stop offset="1" stop-color="#38261c"/></linearGradient><linearGradient id="metal"><stop stop-color="#4c4840"/><stop offset=".5" stop-color="#ded9cd"/><stop offset="1" stop-color="#645e52"/></linearGradient></defs>
+ <rect width="960" height="720" fill="#100f0c"/>
+ <circle cx="850" cy="100" r="300" fill="#aa7a5020"/>
+ <path d="M0 134H960" stroke="#3b342b"/>
+ <rect x="54" y="48" width="56" height="56" rx="13" fill="#30241b" stroke="#68513c"/>
+ <text x="69" y="88" font-family="Arial,Helvetica,sans-serif" font-size="39" font-weight="800" fill="#f1eadf">F.</text>
+ <text x="128" y="91" font-family="Arial,Helvetica,sans-serif" font-size="51" font-weight="800" letter-spacing="-2" fill="#f1eadf">fretwise<tspan fill="#bc906c">.</tspan></text>
+ <text x="55" y="207" font-family="Arial,Helvetica,sans-serif" font-size="31" fill="#e9e3d8">Guitar practice studio</text>
+ <text x="55" y="245" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#b9ad9c">Audio analysis. Chord tools. Your next practice session.</text>
+ <g stroke="#bc906c" stroke-width="7" stroke-linecap="round" opacity=".9"><path d="M59 326v12m18-22v32m18-46v60m18-70v80m18-93v106m18-78v50m18-33v16m18-47v78m18-104v130m18-112v94m18-68v42m18-22v3m18-38v74m18-95v116m18-77v38m18-32v27m18-57v88m18-63v38m18-21v6m18-44v82m18-107v132m18-109v86m18-53v20m18-36v52m18-80v109m18-82v55m18-34v12m18-55v97m18-72v47m18-31v16m18-51v85m18-67v48m18-27v7m18-43v79m18-101v121m18-91v61m18-42v22m18-16v11m18-42v72m18-56v42m18-30v19m18-13v6m18-21v33m18-23v12m18-10v8"/></g>
+ <rect x="55" y="467" width="850" height="157" rx="6" fill="url(#wood)" stroke="#6f523b"/>
+ <path d="M57 472v147" stroke="#dfd4bc" stroke-width="8"/>
+ <g stroke="url(#metal)" stroke-width="4"><path d="M164 468v155M264 468v155M358 468v155M447 468v155M531 468v155M610 468v155M685 468v155M756 468v155M823 468v155M886 468v155"/></g>
+ <g fill="#c4ae8a" opacity=".65"><circle cx="311" cy="546" r="7"/><circle cx="489" cy="546" r="7"/><circle cx="647" cy="546" r="7"/><circle cx="789" cy="546" r="7"/></g>
+ <g stroke="#cec7b8"><path d="M55 484h850" stroke-width="1"/><path d="M55 509h850" stroke-width="1.3"/><path d="M55 534h850" stroke-width="1.6"/><path d="M55 559h850" stroke-width="2"/><path d="M55 584h850" stroke-width="2.5"/><path d="M55 609h850" stroke-width="3"/></g>
+ <g fill="#d8ae82" stroke="#17120e" stroke-width="3"><circle cx="217" cy="509" r="13"/><circle cx="310" cy="534" r="13"/><circle cx="400" cy="584" r="13"/><circle cx="572" cy="559" r="13"/><circle cx="720" cy="484" r="13"/></g>
+ <text x="55" y="675" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#aa9e8c">Next.js / TypeScript / FastAPI / librosa</text>
+</svg>
