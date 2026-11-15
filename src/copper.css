@@ -1,0 +1,28 @@
+/* Etched copper stays visible beneath a narrow, warm current highlight. */
+.root-bed{stroke:#b979465c;stroke-width:2.8;stroke-linecap:round}
+.root-charge{stroke:#ffb568;stroke-width:1.8;filter:drop-shadow(0 0 3px #ff9c47a0) drop-shadow(0 0 9px #ed7b2938)}
+.root-trunk .root-charge{stroke:#ffd29a;stroke-width:2.3;filter:drop-shadow(0 0 4px #ffb56dba) drop-shadow(0 0 12px #f491433d)}
+.root-twig .root-charge{stroke:#f9aa62;stroke-width:1.3;opacity:1}
+.root-junction,.root-terminal{stroke:#eaa66b;stroke-width:1.6}
+.chip-scene .trace{stroke:#cb8d50;stroke-width:2.2;opacity:.8;stroke-linecap:round;stroke-linejoin:round}
+.chip-scene .signal{stroke:#ffda9b;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 4px #ffad58) drop-shadow(0 0 10px #f8a35466)}
+.copper-track{stroke:#d78c4f;stroke-width:2;opacity:.65;stroke-linecap:round;stroke-linejoin:round}
+.copper-current{stroke:#ffcd8c;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 4px #ff9e4c)}
+.chip-motion-toggle{position:absolute;right:10%;bottom:1%;z-index:4;display:flex;align-items:center;gap:9px;min-height:44px;padding:8px 12px;border:1px solid #b8834c80;background:#0c1b16ed;color:#edc599;font:500 13px/1.5 'Manrope',sans-serif;cursor:pointer}
+.chip-motion-toggle:hover{border-color:#ffd29a;color:#fff2de}
+.chip-motion-toggle span{font-size:18px}
+/* The owner explicitly requested chip playback on desktop too. Keep this
+   local to the illustration; all other reduced-motion rules still apply. */
+.chip-scene[data-chip-motion=on] .processor{animation:chipHover 5s ease-in-out infinite!important}
+.chip-scene[data-chip-motion=on] .signal{animation:heroCurrent 3.8s linear infinite!important;stroke-dasharray:14 86;opacity:1}
+.chip-scene[data-chip-motion=off] .processor{animation:none!important;transform:rotate(-7deg)}
+.chip-scene[data-chip-motion=off] *,.chip-scene[data-chip-motion=off] *:before,.chip-scene[data-chip-motion=off] *:after{animation-play-state:paused!important}
+.chip-scene[data-chip-motion=off] .electron-core,.chip-scene[data-chip-motion=off] .electron-glow{display:none}
+@media(max-width:700px){.root-bed{stroke-width:1.9}.root-charge{stroke-width:1.4}.root-trunk .root-charge{stroke-width:1.9}.root-twig .root-charge{stroke-width:1}.chip-motion-toggle{right:5%;bottom:-8px}}
+@media(prefers-reduced-motion:reduce){
+ .root-charge{filter:none;opacity:.85}
+ .chip-scene[data-chip-motion=on] .processor{animation:chipHoverGentle 8s ease-in-out infinite!important}
+ .chip-scene[data-chip-motion=on] .signal{animation-duration:8s!important;filter:none}
+ .chip-scene .electron-core,.chip-scene .electron-glow{display:none}
+}
+@keyframes chipHoverGentle{0%,100%{transform:translateY(2px) rotate(-7deg)}50%{transform:translateY(-5px) rotate(-7deg)}}

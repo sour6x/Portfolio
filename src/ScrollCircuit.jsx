@@ -4,6 +4,16 @@ import './roots.css';
 const clamp = n => Math.max(0, Math.min(1, n));
 const point = (x,y) => ({x,y});
 function route(points, start, end, kind='branch') {
+ // Cut square corners into two 45-degree bends, using the same geometry
+ // for the visible copper and the scroll-following current head.
+ points=points.flatMap((p,i)=>{
+  if(!i||i===points.length-1)return [p];
+  const a=points[i-1],b=points[i+1],ax=a.x-p.x,ay=a.y-p.y,bx=b.x-p.x,by=b.y-p.y;
+  const al=Math.hypot(ax,ay),bl=Math.hypot(bx,by);
+  if(!al||!bl||Math.abs((ax*bx+ay*by)/(al*bl))>.001)return [p];
+  const cut=Math.min(22,al*.3,bl*.3);
+  return [point(p.x+ax/al*cut,p.y+ay/al*cut),point(p.x+bx/bl*cut,p.y+by/bl*cut)];
+ });
  const segments=points.slice(1).map((p,i)=>Math.hypot(p.x-points[i].x,p.y-points[i].y));
  return {points,segments,length:segments.reduce((a,b)=>a+b,0),start,end,kind,
   d:points.map((p,i)=>`${i?'L':'M'}${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ')};
@@ -57,7 +67,7 @@ export default function ScrollCircuit(){
  useEffect(()=>{
   const host=svg.current.parentElement;let frame=0;
   const measure=()=>{frame=0;const bounds=host.getBoundingClientRect();
-   const selectors='.name-heading,.intro,.hero-detail,.hero-actions,.location,.scroll-cue,.discipline-strip,h2,.education,.experience,.toolkit,.credentials,.project-image,.project-category,.project-info h3,.subtitle,.description,.tags,.repo-link,.project-status,.project-note,.projects-header>p,.all-repos,.contact-top p,.email,.socials,.contact-orb';
+   const selectors='.chip-scene,.name-heading,.intro,.hero-detail,.hero-actions,.location,.scroll-cue,.discipline-strip,h2,.education,.experience,.toolkit,.credentials,.project-image,.project-category,.project-info h3,.subtitle,.description,.tags,.repo-link,.project-status,.project-note,.projects-header>p,.all-repos,.contact-top p,.email,.socials,.contact-orb';
    const masks=[...host.querySelectorAll(selectors)].map(element=>{const r=element.getBoundingClientRect();return {x:r.left-bounds.left-9,y:r.top-bounds.top-7,width:r.width+18,height:r.height+14};}).filter(r=>r.width>18&&r.height>14);
    setLayout({width:bounds.width,height:bounds.height,masks});
   };

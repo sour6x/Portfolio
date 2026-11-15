@@ -45,6 +45,8 @@ Retain copper traces because the user explicitly requested PCB visuals and promi
 
 ## Accessibility and verification
 
+The copper refinement uses a wider etched base beneath a narrow amber highlight, plated vias, and chamfered root corners. Current-head interpolation uses the chamfered geometry too. Reading surfaces and the hero illustration are masked out of the page-wide network. Chip playback is explicitly enabled across screen sizes at the owner's request, with a persistent local pause control. Reduced motion keeps the chip's movement to seven pixels, slows its signals, hides traveling particles, and preserves the rest of the site's reduced-motion rules.
+
 Use distinct keyboard focus, sufficiently large mobile controls, readable metadata, and text surfaces that remain clear over background traces. Measure contrast using the actual token pairs. Verify the greeting, section hierarchy, project order/layout, palette, body sizing, mobile overflow, menu, project links, resume path, and reduced motion in the browser. A successful build alone is not visual verification.
 
 ## Readability pass: verification ledger
